@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ombs_senegal",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "ombs_senegal",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall ombs_senegal in Development mode\n# make sure ombs_senegal package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to ombs_senegal\n$ nbdev_prepare",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "ombs_senegal",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/iraind/ombs_senegal.git\nor from conda\n$ conda install -c iraind ombs_senegal\nor from pypi\n$ pip install ombs_senegal\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "ombs_senegal",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "region.html",
+    "href": "region.html",
+    "title": "Region",
+    "section": "",
+    "text": "source",
+    "crumbs": [
+      "Region"
+    ]
+  },
+  {
+    "objectID": "region.html#example",
+    "href": "region.html#example",
+    "title": "Region",
+    "section": "Example",
+    "text": "Example\n\nInput\n\n\n\n\n\n\n\n\n\n\n\nOutput",
+    "crumbs": [
+      "Region"
+    ]
+  },
+  {
+    "objectID": "benchmark_model.html",
+    "href": "benchmark_model.html",
+    "title": "Benchmark Models",
+    "section": "",
+    "text": "source\n\nnormalize\n\n normalize (df)\n\n\n\nSplit data\n\n\nFeature generator\n\nFeature generator that uses a sliding window of n previous timesteps and polynomial features to predict the next value, enabling learning of temporal patterns and non-linear relationships\n\n\nsource\n\n\nFeatureGenerator\n\n FeatureGenerator (context_window:int=10, target_window:int=10,\n                   degree:int=1)\n\nTransforms time series data into feature matrices suitable for machine learning models. Creates lagged features using a sliding window and optionally generates polynomial features to capture non-linear relationships between variables.\n\n\nBenchmark model\nWe chose a linear regression model as our benchmark because: 1. When combined with our feature generator, it provides a simple yet effective baseline 2. The polynomial features allow it to capture non-linear relationships in the data 3. The sliding window enables learning of temporal patterns across multiple timesteps 4. Linear regression models are highly interpretable and computationally efficient\n\nsource\n\n\nSimpleRegressionModel\n\n SimpleRegressionModel ()\n\nInitialize self. See help(type(self)) for accurate signature.\n\n\nModel training and comparison\nNow we create a single dataset containg all the results\n\nsource\n\n\nplot_benchmark_scores\n\n plot_benchmark_scores (df:pandas.core.frame.DataFrame, figsize:tuple=(8,\n                        7), fontsize:int=7, xlim:tuple=(None, None),\n                        ylim:tuple=(None, None))\n\nPlot MAE vs MSE scores with degree and window annotations for model comparison\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\ndf\nDataFrame\n\nDataframe with polynomial degree and window as index and mae and mse as columns\n\n\nfigsize\ntuple\n(8, 7)\nFigure size in inches (width, height)\n\n\nfontsize\nint\n7\nFont size for annotations\n\n\nxlim\ntuple\n(None, None)\nTuple of (min, max) values for x-axis limits\n\n\nylim\ntuple\n(None, None)\nTuple of (min, max) values for y-axis limits\n\n\n\n\nsource\n\n\nplot_benchmark_scores\n\n plot_benchmark_scores (df:pandas.core.frame.DataFrame, figsize:tuple=(8,\n                        7), fontsize:int=7, xlim:tuple=(None, None),\n                        ylim:tuple=(None, None))\n\nPlot MAE vs MSE scores with degree and window annotations for model comparison\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\ndf\nDataFrame\n\nDataframe with polynomial degree and window as index and mae and mse as columns\n\n\nfigsize\ntuple\n(8, 7)\nFigure size in inches (width, height)\n\n\nfontsize\nint\n7\nFont size for annotations\n\n\nxlim\ntuple\n(None, None)\nTuple of (min, max) values for x-axis limits\n\n\nylim\ntuple\n(None, None)\nTuple of (min, max) values for y-axis limits\n\n\n\nBased on the scatter plot comparing MAE vs MSE metrics, we can conclude that polynomial regression with degree 2 and window sizes between 30-50 days provides the optimal predictions. This is evident from the cluster of points in the lower left corner of the plot, which indicates lower error rates for both metrics. Specifically, the combinations of degree=2 with windows around 40 days achieve the best balance between Mean Absolute Error and Mean Squared Error, suggesting these parameters offer the most accurate and stable predictions without overfitting the data.\nWe save the best model for later use",
+    "crumbs": [
+      "Benchmark Models"
+    ]
+  }
+]
