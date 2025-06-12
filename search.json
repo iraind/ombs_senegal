@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ombs_senegal",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "ombs_senegal",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall ombs_senegal in Development mode\n# make sure ombs_senegal package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to ombs_senegal\n$ nbdev_prepare",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "ombs_senegal",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/iraind/ombs_senegal.git\nor from conda\n$ conda install -c iraind ombs_senegal\nor from pypi\n$ pip install ombs_senegal\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "ombs_senegal",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "ombs_senegal"
+    ]
+  },
+  {
+    "objectID": "benchmark_model.html",
+    "href": "benchmark_model.html",
+    "title": "Benchmark Models",
+    "section": "",
+    "text": "source",
+    "crumbs": [
+      "Benchmark Models"
+    ]
+  },
+  {
+    "objectID": "benchmark_model.html#scoring",
+    "href": "benchmark_model.html#scoring",
+    "title": "Benchmark Models",
+    "section": "Scoring",
+    "text": "Scoring\nSince we have generated multiple predictions with different parameters, we will select only the best performing models according to each metric\n\nsource\n\nBenchmarkScores\n\n BenchmarkScores ()\n\n*A class to compute and compare different error metrics between predictions and observations.\nThis class provides a flexible way to compute multiple error metrics between predicted and observed values. New metrics can be easily added by implementing them as methods. The new metrics can then be used by passing their method names as strings to compute_scores().\nExample:\n```python class CustomBenchmarkScores(BenchmarkScores): def mse(self, pred, obs): error = ((pred - obs)**2).mean(dim=“time”) error.name = “mse” return error",
+    "crumbs": [
+      "Benchmark Models"
+    ]
+  },
+  {
+    "objectID": "benchmark_model.html#save-prediction-data",
+    "href": "benchmark_model.html#save-prediction-data",
+    "title": "Benchmark Models",
+    "section": "Save prediction data",
+    "text": "Save prediction data\nWe save the best model for later use",
+    "crumbs": [
+      "Benchmark Models"
+    ]
+  },
+  {
+    "objectID": "benchmark_model.html#time-series-verification",
+    "href": "benchmark_model.html#time-series-verification",
+    "title": "Benchmark Models",
+    "section": "Time series verification",
+    "text": "Time series verification\nNow that we have identified the optimal model parameters, let’s verify its performance by comparing the predicted discharge values with both observed values and MGB model predictions. This comparison will be done across the full 10-day prediction horizon to assess how well our model maintains its predictive power over time. We’ll visualize these comparisons using time series plots that show the observed discharge, our model’s predictions, and the MGB model predictions side by side.\n\nsource\n\nplot_prediction_comparison\n\n plot_prediction_comparison (observed:xarray.core.dataarray.DataArray,\n                             predicted:xarray.core.dataset.Dataset,\n                             mgb:xarray.core.dataarray.DataArray)\n\nPlot comparison between observed, predicted and MGB discharge values for a 10-day horizon.\n\n\n\n\n\n\n\n\n\nType\nDetails\n\n\n\n\nobserved\nDataArray\nTime series of observed water discharge values\n\n\npredicted\nDataset\nDataset containing predicted discharge values for each forecast horizon (t+1 to t+10)\n\n\nmgb\nDataArray\nTime series of MGB model water discharge predictions\n\n\nReturns\nFigure\n\n\n\n\nWe first need to reescale the MGB data",
+    "crumbs": [
+      "Benchmark Models"
+    ]
+  },
+  {
+    "objectID": "region.html",
+    "href": "region.html",
+    "title": "Region",
+    "section": "",
+    "text": "source",
+    "crumbs": [
+      "Region"
+    ]
+  },
+  {
+    "objectID": "region.html#example",
+    "href": "region.html#example",
+    "title": "Region",
+    "section": "Example",
+    "text": "Example\n\nInput\n\n\n\n\n\n\n\n\n\n\n\nOutput",
+    "crumbs": [
+      "Region"
+    ]
+  }
+]
